@@ -1,54 +1,125 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-<meta charset='UTF-8'>
-<title>Bloom & Glow</title>
-<link rel='stylesheet' href='styles.css'>
+  <meta charset="UTF-8" />
+  <title>Bloom & Glow Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="header">
+    <div class="logo">🌸 Bloom & Glow</div>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+  </header>
 
-<header class='header'>
-<div class='logo'>🌸 Bloom & Glow</div>
-<nav>
-<a href='#products'>Products</a>
-<a href='#reviews'>Reviews</a>
-</nav>
-<div class='cart' onclick='toggleCart()'>🛒 <span id='count'>0</span></div>
-</header>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Nurture Your Skin</h1>
+      <p>Discover Bloom & Glow skincare designed for soft, glowing skin.</p>
+      <a href="#products" class="btn">Shop Now</a>
+    </div>
+    <div class="hero-image">
+      <img src="assets/hero.png" alt="Bloom & Glow hero products" />
+    </div>
+  </section>
 
-<section class='hero'>
-<div class='left'>
-<h1>Nurture Your Skin</h1>
-<p>Discover the best skincare products for your skin type.</p>
-<a href='#products' class='btn'>Shop Now</a>
-</div>
-<div class='right'><img src='assets/hero_products.png'></div>
-</section>
+  <h2 class="section-title" id="products">Our Products</h2>
 
-<h2 class='title' id='products'>Our Products</h2>
+  <section class="products-grid">
+    <article class="card">
+      <img src="assets/product1.jpg" alt="Face Mask" />
+      <h3>Face Mask</h3>
+      <p class="price">SAR 95</p>
+      <button onclick="addToCart('Face Mask', 95)">Add to Cart</button>
+    </article>
 
-<div class='grid'>
-<div class='card'><img src='assets/hero_products.png'><h3>Bloom Glow Set</h3><p class='price'>SAR 299</p><button onclick="addToCart('Bloom Glow Set',299)">Add</button></div>
-</div>
+    <article class="card">
+      <img src="assets/product2.jpg" alt="Vitamin C Serum" />
+      <h3>Vitamin C Serum</h3>
+      <p class="price">SAR 135</p>
+      <button onclick="addToCart('Vitamin C Serum', 135)">Add to Cart</button>
+    </article>
 
-<h2 class='title' id='reviews'>Customer Reviews</h2>
+    <article class="card">
+      <img src="assets/product3.jpg" alt="Gentle Cleanser" />
+      <h3>Gentle Cleanser</h3>
+      <p class="price">SAR 98</p>
+      <button onclick="addToCart('Gentle Cleanser', 98)">Add to Cart</button>
+    </article>
 
-<div class='reviews'>
-<div class='review'>⭐️⭐️⭐️⭐️⭐️ “Amazing quality!” – Sara</div>
-<div class='review'>⭐️⭐️⭐️⭐️⭐️ “My skin improved so much.” – Layan</div>
-<div class='review'>⭐️⭐️⭐️⭐️⭐️ “Highly recommend!” – Raghad</div>
-<div class='review'>⭐️⭐️⭐️⭐️⭐️ “Beautiful packaging.” – Maha</div>
-<div class='review'>⭐️⭐️⭐️⭐️⭐️ “Will buy again ❤️” – Noor</div>
-</div>
+    <article class="card">
+      <img src="assets/product4.jpg" alt="Eye Cream" />
+      <h3>Eye Cream</h3>
+      <p class="price">SAR 89</p>
+      <button onclick="addToCart('Eye Cream', 89)">Add to Cart</button>
+    </article>
 
-<div id='cartPanel' class='panel'>
-<h3>Your Cart</h3>
-<ul id='items'></ul>
-<p class='total'>Total: SAR <span id='total'>0</span></p>
-<button onclick='checkout()'>Checkout</button>
-<button onclick='toggleCart()'>Close</button>
-</div>
+    <article class="card">
+      <img src="assets/product5.jpg" alt="Mineral Sunscreen" />
+      <h3>Mineral Sunscreen</h3>
+      <p class="price">SAR 105</p>
+      <button onclick="addToCart('Mineral Sunscreen', 105)">Add to Cart</button>
+    </article>
 
-<script src='script.js'></script>
+    <article class="card">
+      <img src="assets/product6.jpg" alt="Brightening Serum" />
+      <h3>Brightening Serum</h3>
+      <p class="price">SAR 120</p>
+      <button onclick="addToCart('Brightening Serum', 120)">Add to Cart</button>
+    </article>
+
+    <article class="card">
+      <img src="assets/product7.jpg" alt="Brightening Serum Spray" />
+      <h3>Brightening Serum Spray</h3>
+      <p class="price">SAR 110</p>
+      <button onclick="addToCart('Brightening Serum Spray', 110)">Add to Cart</button>
+    </article>
+
+    <article class="card">
+      <img src="assets/product8.jpg" alt="Hydrating Face Cream" />
+      <h3>Hydrating Face Cream</h3>
+      <p class="price">SAR 82</p>
+      <button onclick="addToCart('Hydrating Face Cream', 82)">Add to Cart</button>
+    </article>
+
+    <article class="card">
+      <img src="assets/product9.jpg" alt="Facial Oil" />
+      <h3>Facial Oil</h3>
+      <p class="price">SAR 70</p>
+      <button onclick="addToCart('Facial Oil', 70)">Add to Cart</button>
+    </article>
+  </section>
+
+  <h2 class="section-title" id="reviews">Customer Reviews</h2>
+
+  <section class="reviews">
+    <div class="review">⭐️⭐️⭐️⭐️⭐️ “My skin feels so soft and hydrated!” – Sara</div>
+    <div class="review">⭐️⭐️⭐️⭐️⭐️ “The Vitamin C Serum made my skin brighter in two weeks.” – Layan</div>
+    <div class="review">⭐️⭐️⭐️⭐️⭐️ “Love the gentle cleanser, it doesn’t dry my skin.” – Amal</div>
+    <div class="review">⭐️⭐️⭐️⭐️⭐️ “Beautiful packaging and amazing scent.” – Raghad</div>
+    <div class="review">⭐️⭐️⭐️⭐️⭐️ “Eye cream is my favorite, I use it every night.” – Noor</div>
+  </section>
+
+  <h2 class="section-title" id="contact">Contact</h2>
+  <section class="contact">
+    <p>Email: bloomglow.shop@example.com</p>
+    <p>Instagram: @bloomglow.beauty</p>
+    <p>Snapchat: bloomglow-snap</p>
+  </section>
+
+  <aside id="cart-panel" class="cart-panel">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p class="total">Total: SAR <span id="cart-total">0</span></p>
+    <button onclick="checkout()">Checkout</button>
+    <button onclick="toggleCart()">Close</button>
+  </aside>
+
+  <script src="script.js"></script>
 </body>
 </html>
