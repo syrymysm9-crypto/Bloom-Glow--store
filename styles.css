@@ -1,0 +1,20 @@
+
+body{font-family:Arial;background:#fff7f7;margin:0;}
+.header{display:flex;justify-content:space-between;padding:20px;background:white;align-items:center;}
+.logo{font-size:24px;font-weight:bold;}
+nav a{margin-left:15px;text-decoration:none;color:#333;font-weight:600;}
+.cart{cursor:pointer;font-size:20px;}
+.hero{display:flex;padding:40px;align-items:center;justify-content:space-between;}
+.left h1{font-size:42px;margin:0;}
+.btn{display:inline-block;padding:12px 22px;background:#d8a6b2;color:white;border-radius:8px;text-decoration:none;margin-top:15px;}
+.right img{width:380px;border-radius:12px;}
+.title{text-align:center;margin-top:30px;font-size:28px;}
+.grid{display:flex;justify-content:center;padding:20px;}
+.card{background:white;width:260px;padding:20px;border-radius:15px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.1);}
+.card img{width:100%;border-radius:10px;}
+.price{color:#d48a9e;font-weight:bold;font-size:20px;}
+button{padding:10px 15px;background:#d48a9e;border:none;color:white;border-radius:8px;margin-top:8px;cursor:pointer;}
+.reviews{text-align:center;padding:20px;}
+.review{background:white;padding:15px;margin:10px auto;width:80%;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);}
+.panel{position:fixed;right:-350px;top:0;width:320px;height:100%;background:white;padding:20px;transition:.4s;box-shadow:-2px 0 10px rgba(0,0,0,0.1);}
+.panel.open{right:0;}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Bloom & Glow</title>
+<link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+
+<header class='header'>
+<div class='logo'>🌸 Bloom & Glow</div>
+<nav>
+<a href='#products'>Products</a>
+<a href='#reviews'>Reviews</a>
+</nav>
+<div class='cart' onclick='toggleCart()'>🛒 <span id='count'>0</span></div>
+</header>
+
+<section class='hero'>
+<div class='left'>
+<h1>Nurture Your Skin</h1>
+<p>Discover the best skincare products for your skin type.</p>
+<a href='#products' class='btn'>Shop Now</a>
+</div>
+<div class='right'><img src='assets/hero_products.png'></div>
+</section>
+
+<h2 class='title' id='products'>Our Products</h2>
+
+<div class='grid'>
+<div class='card'><img src='assets/hero_products.png'><h3>Bloom Glow Set</h3><p class='price'>SAR 299</p><button onclick="addToCart('Bloom Glow Set',299)">Add</button></div>
+</div>
+
+<h2 class='title' id='reviews'>Customer Reviews</h2>
+
+<div class='reviews'>
+<div class='review'>⭐️⭐️⭐️⭐️⭐️ “Amazing quality!” – Sara</div>
+<div class='review'>⭐️⭐️⭐️⭐️⭐️ “My skin improved so much.” – Layan</div>
+<div class='review'>⭐️⭐️⭐️⭐️⭐️ “Highly recommend!” – Raghad</div>
+<div class='review'>⭐️⭐️⭐️⭐️⭐️ “Beautiful packaging.” – Maha</div>
+<div class='review'>⭐️⭐️⭐️⭐️⭐️ “Will buy again ❤️” – Noor</div>
+</div>
+
+<div id='cartPanel' class='panel'>
+<h3>Your Cart</h3>
+<ul id='items'></ul>
+<p class='total'>Total: SAR <span id='total'>0</span></p>
+<button onclick='checkout()'>Checkout</button>
+<button onclick='toggleCart()'>Close</button>
+</div>
+
+<script src='script.js'></script>
+</body>
+</html>
